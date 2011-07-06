@@ -38,14 +38,14 @@ public final class MatrixUtil {
 			int fieldOfViewVertical, float aspectRatio, float minimumClearance,
 			float maximumClearance) {
 		double fieldOfViewInRad = fieldOfViewVertical * Math.PI / 180.0;
+		double f = (1/Math.tan(fieldOfViewInRad/2));
 		return new FloatMatrix4x4(new float[][] {
 				new float[] {
-						(float) (Math.tan(fieldOfViewInRad) / aspectRatio), 0,
+						(float) (f / aspectRatio), 0,
 						0, 0 },
 				new float[] {
 						0,
-						(float) (1 / Math.tan(fieldOfViewVertical * Math.PI
-								/ 180.0)), 0, 0 },
+						(float) (f), 0, 0 },
 				new float[] {
 						0,
 						0,
