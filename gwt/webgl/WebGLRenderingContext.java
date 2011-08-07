@@ -4,7 +4,7 @@ import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.user.client.Element;
 import com.robledo.util.gwt.canvas.Context;
 
-public class WebGLRenderingContext extends Context{
+public class WebGLRenderingContext extends Context {
 
 	protected WebGLRenderingContext () {
 	}
@@ -159,6 +159,9 @@ public class WebGLRenderingContext extends Context{
 	public native final void texImage2D(int target, int level, int internalformat, int format, int type, Element image) /*-{
 		this.texImage2D(target, level, internalformat, format, type, image);
 	}-*/;
+	public native final void texImage2D(int target, int level, int internalformat, int width, int height, int border, int format, int type, ArrayBufferView pixels) /*-{
+		this.texImage2D(target, level, internalformat, width, height, border, format, type, pixels);
+	}-*/;
 	public native final void uniform3f(WebGLUniformLocation location, float x, float y, float z) /*-{
 		this.uniform3f(location, x, y, z);
 	}-*/;
@@ -166,5 +169,6 @@ public class WebGLRenderingContext extends Context{
 	public final native void pixelStorei(int pname, int param) /*-{
 		this.pixelStorei(pname, param);
 	}-*/;
+
 
 }

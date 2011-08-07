@@ -64,6 +64,20 @@ public class ArrayUtil {
 		}
 	}
 	
+	public static short[] toShortArray(Object[] objectArray) {
+		if (objectArray != null) {
+			short[] shortArray = new short[objectArray.length];
+			 
+			for (int i = 0; i < objectArray.length; i++)
+			{
+				shortArray[i] = ((Short)objectArray[i]).shortValue();
+			}
+			return shortArray;
+		} else {
+			return null;
+		}
+	}
+	
 
 	
 }

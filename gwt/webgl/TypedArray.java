@@ -1,9 +1,8 @@
 package com.robledo.util.gwt.webgl;
 
-import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArrayNumber;
 
-public abstract class TypedArray<T extends TypedArray<?>> extends JavaScriptObject {
+public abstract class TypedArray<T extends TypedArray<?>> extends ArrayBufferView {
 
 	  protected TypedArray() {
 	  }
