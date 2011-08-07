@@ -4,6 +4,9 @@ import com.google.gwt.core.client.JavaScriptObject;
 
 public class ArrayBufferView extends JavaScriptObject {
 
+	protected ArrayBufferView () {
+	}
+	
 	public final native ArrayBuffer getBuffer() /*-{
 		return this.buffer;
 	}-*/;
