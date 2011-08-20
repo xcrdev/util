@@ -1,8 +1,12 @@
 package com.robledo.util.gwt.webgl;
 
-import com.google.gwt.core.client.JavaScriptObject;
-
-public class WebGLUniformLocation extends JavaScriptObject{
-	 protected WebGLUniformLocation() { 
-	 }
+public class WebGLUniformLocation {
+	private Integer value;
+	public WebGLUniformLocation(int value) {
+		this.value = new Integer(value);
+	}
+	
+	public int intValue() {
+		return value.intValue();
+	}
 }
