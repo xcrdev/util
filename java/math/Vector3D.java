@@ -24,7 +24,7 @@ public class Vector3D {
 		return z;
 	}
 	
-	public Vector3D toUnitVector() {
+	public Vector3D normalize() {
 		float len = this.length();
 		return new Vector3D(this.x/len, this.y/len, this.z/len);
 	}
@@ -57,8 +57,8 @@ public class Vector3D {
 		return new Vector3D(this.x - v.x, this.y - v.y, this.z - v.z);
 	}
 	
-	public static Vector3D minus(Point3D a, Point3D b) {
-		return new Vector3D(a.getX()-b.getX(),a.getY()-b.getY(),a.getZ()-b.getZ());
+	public static Vector3D minus(Point3D destination, Point3D origin) {
+		return new Vector3D(destination.getX()-origin.getX(),destination.getY()-origin.getY(),destination.getZ()-origin.getZ());
 	}
 	
 	public static Vector3D create(Point3D originPoint, CompassRadians theta, float distance) {

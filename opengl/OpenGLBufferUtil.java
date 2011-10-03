@@ -1,4 +1,4 @@
-package com.robledo.util.tmp.opengl;
+package com.robledo.util.opengl;
 
 public abstract class OpenGLBufferUtil {
 

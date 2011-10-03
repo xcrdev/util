@@ -100,12 +100,12 @@ public class WebGLRenderingContext extends Context {
 	public native final void enableVertexAttribArray (int index) /*-{
 		this.enableVertexAttribArray(index);
 	}-*/;
-	public final WebGLUniformLocation getUniformLocation(WebGLProgram program, String name) {
-		return new WebGLUniformLocation(getUniformLocationInternal(program,name));
-	}
-	private native final int getUniformLocationInternal(WebGLProgram program, String name) /*-{
+	public native final WebGLUniformLocation getUniformLocation(WebGLProgram program, String name) /*-{
 		return this.getUniformLocation(program, name);
 	}-*/;
+//	private native final int getUniformLocationInternal(WebGLProgram program, String name) /*-{
+//		return this.getUniformLocation(program, name);
+//	}-*/;
 	public native final WebGLBuffer createBuffer() /*-{
 		return this.createBuffer();
 	}-*/;
@@ -127,12 +127,12 @@ public class WebGLRenderingContext extends Context {
 	public native final void vertexAttribPointer(int index, int size, int type, boolean normalized, int stride, int offset) /*-{
 		this.vertexAttribPointer(index, size, type, normalized, stride, offset);
 	}-*/;
-	public final void uniformMatrix4fv(WebGLUniformLocation location, boolean transpose, Float32Array value){
-		uniformMatrix4fvInternal(location.intValue(), transpose, value);
-	}
-	private native final void uniformMatrix4fvInternal(int location, boolean transpose, Float32Array value) /*-{
+	public native final void uniformMatrix4fv(WebGLUniformLocation location, boolean transpose, Float32Array value)/*-{
 		this.uniformMatrix4fv(location, transpose, value);
 	}-*/;
+//	private native final void uniformMatrix4fvInternal(int location, boolean transpose, Float32Array value) /*-{
+//		this.uniformMatrix4fv(location, transpose, value);
+//	}-*/;
 	//public native final void uniformMatrix4fv(int location, boolean transpose, JavaScriptObject value) /*-{
 	//	this.uniformMatrix4fv(location, transpose, value);
 	//}-*/;
@@ -151,12 +151,12 @@ public class WebGLRenderingContext extends Context {
 	public native final void activeTexture(int texture) /*-{
 		this.activeTexture(texture);
 	}-*/;
-	public final void uniform1i(WebGLUniformLocation location, int x) {
-		uniform1iInternal(location.intValue(), x);
-	}
-	private native final void uniform1iInternal(int location, int x) /*-{
+	public native final void uniform1i(WebGLUniformLocation location, int x) /*-{
 		this.uniform1i(location, x);
 	}-*/;
+//	private native final void uniform1iInternal(int location, int x) /*-{
+//		this.uniform1i(location, x);
+//	}-*/;
 	public native final WebGLTexture createTexture() /*-{
 		return this.createTexture();
 	}-*/;
@@ -175,12 +175,12 @@ public class WebGLRenderingContext extends Context {
 	public native final void texSubImage2D(int target, int level, int xoffset, int yoffset, int width, int height, int format, int type, ArrayBufferView pixels) /*-{
 		this.texSubImage2D(target, level, xoffset, yoffset, width, height, format, type, pixels);
 	}-*/;
-	public final void uniform3f(WebGLUniformLocation location, float x, float y, float z) {
-		uniform3fInternal(location.intValue(),x,y,z);
-	}
-	private native final void uniform3fInternal(int location, float x, float y, float z) /*-{
+	public native final void uniform3f(WebGLUniformLocation location, float x, float y, float z) /*-{
 		this.uniform3f(location, x, y, z);
 	}-*/;
+//	private native final void uniform3fInternal(int location, float x, float y, float z) /*-{
+//		this.uniform3f(location, x, y, z);
+//	}-*/;
 	
 	public final native void pixelStorei(int pname, int param) /*-{
 		this.pixelStorei(pname, param);

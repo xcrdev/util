@@ -1,4 +1,4 @@
-package com.robledo.util.tmp.opengl;
+package com.robledo.util.opengl;
 
 /*
  * Copyright (c) 2002-2008 LWJGL Project

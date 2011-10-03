@@ -28,11 +28,15 @@ public class Point3D {
 	}*/
 
 	
-	/*public static Point3D add(Point3D a, Point3D b) {
+	public static Point3D add(Point3D a, Point3D b) {
 		return new Point3D(a.x+b.x, a.y+b.y, a.z+b.z);
-	}*/
+	}
 	
 	public static Point3D add(Point3D a, Vector3D b) {
 		return new Point3D(a.getX()+b.getX(), a.getY()+b.getY(), a.getZ()+b.getZ());
+	}
+	
+	public Point3D multiply(float scalar) {
+		return new Point3D(x*scalar, y*scalar, z*scalar);
 	}
 }

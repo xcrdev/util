@@ -1,6 +1,4 @@
 package com.robledo.util.gwt.util;
-//import static java.lang.Math.cos;
-//import static java.lang.Math.sin;
 
 import com.google.gwt.event.dom.client.KeyDownEvent;
 import com.google.gwt.event.dom.client.KeyUpEvent;
@@ -8,7 +6,6 @@ import com.google.gwt.event.dom.client.KeyUpHandler;
 import com.google.gwt.event.dom.client.MouseMoveEvent;
 import com.google.gwt.event.dom.client.MouseMoveHandler;
 import com.google.gwt.event.dom.client.KeyDownHandler;
-
 import com.robledo.util.java.util.FunctionRegistration;
 
 public class UserInputAdapter {
@@ -103,6 +100,7 @@ public class UserInputAdapter {
 	}
 	
     public static UserInputAdapter initialize(MyFocusWidget canvasFocusWidget) {
+    	
     	if (instance == null) {
     		instance = new UserInputAdapter();
     		canvasFocusWidget.addKeyDownHandler(instance.new UserKeyDownHandler());
